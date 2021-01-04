@@ -1,0 +1,19 @@
+{
+  "name": "@idirdev/formguard",
+  "version": "1.0.0",
+  "description": "Form validation and sanitization library with pipe-syntax rules and locale support.",
+  "main": "src/index.js",
+  "author": "idirdev",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idirdev/formguard.git"
+  },
+  "keywords": [],
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}

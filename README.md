@@ -123,3 +123,40 @@ function MyForm() {
 ## License
 
 MIT
+
+---
+
+## 🇫🇷 Documentation en français
+
+### Description
+FormGuard est une bibliothèque légère de validation de formulaires React. Elle propose une API déclarative, des validateurs intégrés (required, email, minLength, pattern, etc.), la validation croisée entre champs, et un support complet de TypeScript. Aucune dépendance externe — uniquement React en peer dependency.
+
+### Installation
+```bash
+npm install @idirdev/formguard
+```
+
+### Utilisation
+```tsx
+import { useForm, Form, Field, required, email, minLength } from '@idirdev/formguard';
+
+function LoginForm() {
+  const form = useForm({
+    fields: [
+      { name: 'email', validations: [required(), email()] },
+      { name: 'password', validations: [required(), minLength(8)] },
+    ],
+    onSubmit: async (values) => { await login(values); },
+  });
+
+  return (
+    <Form form={form}>
+      <Field name="email" form={form} label="Email" type="email" />
+      <Field name="password" form={form} label="Mot de passe" type="password" />
+      <button type="submit">Connexion</button>
+    </Form>
+  );
+}
+```
+
+Consultez la section **API Reference** et **Built-in Validators** ci-dessus pour la documentation complète.

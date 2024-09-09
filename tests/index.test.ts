@@ -250,7 +250,7 @@ describe('validateForm', () => {
 
     const errors = validateForm({ name: '', email: 'bad' }, fields);
     expect(errors.name).toBe('This field is required');
-    expect(errors.email).toBeUndefined(); // required passes for non-empty, email not checked because "bad" is not empty and the email validator will match
+    expect(errors.email).toBe('Please enter a valid email address');
   });
 
   it('should return empty errors for valid form', () => {

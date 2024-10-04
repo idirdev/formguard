@@ -160,3 +160,4 @@ function LoginForm() {
 ```
 
 Consultez la section **API Reference** et **Built-in Validators** ci-dessus pour la documentation complète.
+
